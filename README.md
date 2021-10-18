@@ -68,3 +68,22 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Screenshots
+
+### First test written and partailly passed
+
+The first test written to create a to do item:
+
+      cy.visit('/');
+
+      cy.get('[data-testid="inputItem"]')
+        .type('Walk the dog');
+
+      cy.get('[data-testid="addButton"]')
+        .click();
+
+      cy.get('[data-testid="inputItem"]')
+        .should('have.value', '');
+
+      cy.contains('Walk the dog');
