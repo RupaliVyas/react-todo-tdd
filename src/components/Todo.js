@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import TodoForm from './TodoForm'
 import TodoList from './TodoList'
 import { RiCloseCircleLine } from 'react-icons/ri' 
+import { TiEdit } from 'react-icons/ti' 
 
 
 function Todo({todos,removeTodo}) {
@@ -21,6 +22,12 @@ function Todo({todos,removeTodo}) {
                 {() => removeTodo(todo.id)} 
                 className="delete-icon"
                 data-testid="delete-icon"
+                />
+                <TiEdit 
+                onClick=
+                {() => setEdit({id: todo.id, value: todo.text})} 
+                className="edit-icon"
+                data-testid="edit-icon"
                 />
         
             </div>
