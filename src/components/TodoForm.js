@@ -1,10 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
+
 
 function TodoForm() {
+
+    const [input, setInput] = useState('')
+
+    const handleSubmit = e => {
+        setInput('')
+    }
+
+
     return (
         <div>
-            <input type='text' data-testid='inputItem'></input>
-            <button type="submit" data-testid='addButton'>Add To do</button>
+            <form className="todo-form" onSubmit={handleSubmit}>
+            <input className="todo-input" type='text' data-testid='inputItem'></input>
+            <button className="todo-submit" type="submit" data-testid='addButton'>Add To do</button>
+            </form>
         </div>
     )
 }
