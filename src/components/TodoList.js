@@ -23,11 +23,18 @@ function TodoList() {
         console.log(...todos);
     }
 
+    const removeTodo = id => {
+        const removeArr = [...todos].filter(todo => todo.id !== id)
+
+        setTodos(removeArr);
+    }
 
     return (
         <div>
         <TodoForm onSubmit = {addTodo} />
-        <Todo todos={todos} />
+        <Todo todos={todos} 
+        removeTodo = {removeTodo}
+        />
         </div>
     )
 }

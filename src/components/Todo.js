@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
 import TodoForm from './TodoForm'
 import TodoList from './TodoList'
+import { RiCloseCircleLine } from 'react-icons/ri' 
 
 
-function Todo({todos}) {
+function Todo({todos,removeTodo}) {
 
     const [edit,setEdit] = useState({
         id:null,
@@ -13,6 +14,15 @@ function Todo({todos}) {
         <div>
             <div key={todo.id}>
                 {todo.text}
+            </div>
+            <div className="icons">
+                <RiCloseCircleLine 
+                onClick=
+                {() => removeTodo(todo.id)} 
+                className="delete-icon"
+                data-testid="delete-icon"
+                />
+        
             </div>
         </div>
     ))
