@@ -45,7 +45,7 @@ function TodoForm(props) {
         onChange={handleChange}
         ref={inputRef}            
         />
-        <button className='update-button' data-testid='updateButton'>Update todo</button>)
+        <button className='update-button' data-testid='updateButton'>Update todo</button>
         </>):( <> <input type='text'
         placeholder='Add a todo' 
         value={input} 
