@@ -1,6 +1,6 @@
 describe('creating a todo item', () => {
     it('displays the to do item', () => {
-      cy.visit('../public/index.html');
+      cy.visit('/');
   
       cy.get('[data-testid="inputItem"]')
         .type('Walk the dog');

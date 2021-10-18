@@ -1,9 +1,10 @@
 import React from 'react'
+import TodoForm from './components/TodoForm'
 
 function App() {
   return (
     <div>
-      <h1>Hello</h1>
+      <TodoForm />
     </div>
   )
 }
