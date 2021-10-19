@@ -26,7 +26,7 @@ function Todo({todos,removeTodo, updateTodo}) {
 
 
     return todos.map((todo,index) => (
-        <div>
+        <div className='todo-row'>
             <div key={todo.id}>
                 {todo.text}
             </div>

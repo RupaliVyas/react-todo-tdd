@@ -49,7 +49,7 @@ function TodoForm(props) {
         </>):( <> <input type='text'
         placeholder='Add a todo' 
         value={input} 
-        className = 'todo-input'
+        className='todo-input'
         name='text' 
         data-testid='inputItem'
         onChange={handleChange}

@@ -41,6 +41,7 @@ function TodoList() {
 
     return (
         <div>
+        <h1>To DOs</h1>
         <TodoForm onSubmit = {addTodo} />
         <Todo todos={todos} 
         removeTodo = {removeTodo}
